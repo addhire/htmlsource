@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- input: 사용자에게 입력받을 데이터 양식
+            autocomplete, autofocus(페이지에 하나만 가능. 커서니까)-->
+    <form action="">
+      <!--노발리데이트: 유효성 검사 안하겠다.-->
+      <input
+        type="text"
+        autocomplete="on"
+        autofocus
+        maxlength="8"
+        minlength="4"
+        required
+        placeholder="이름입력"
+        value="홍길동"
+        readonly
+      />
+      <!-- 힌트 주는 것
+        리콰이어드 있으면 빈 상태로 제출 못함. 유효성 검사의 일환.
+        넘버가 들어와야 맥스민 쓴게 효과가 있음. 밸류값 있으면 힌트 의미없음(이름입력). 리드온니(읽기전용) name(가장중요)-->
+      <input
+        type="number"
+        autocomplete="on"
+        max="10"
+        min="1"
+        value="5"
+        step="2"
+      />
+      <input type="checkbox" name="fruits" id="" />
+      <label for="">사과</label>
+      <input type="checkbox" name="fruits" id="" checked />
+      <label for="">바나나</label>
+      <input type="checkbox" name="fruits" id="" />
+      <label for="">수박</label>
+      <input type="radio" name="gender" id="" checked />
+      <label for="">남</label>
+      <input type="radio" name="gender" id="" />
+      <label for="">여</label>
+      <!--라디오 실행하면 해제가 안됨. 원버튼으로는-->
+
+      <div>
+        <label for="eamil">이메일</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="pwd">비밀번호</label>
+        <input type="password" name="pwd" id="pwd" required />
+        <!-- 라벨에도 pwd. 같은 글자를 써주면 비밀번호 글씨 클릭하면 화면에 커서 반짝임....! 연동 됨. id랑 맞춰야함.-->
+      </div>
+      <div>
+        <label for="">숨겨진 값</label>
+        <input type="hidden" name="num" value="10" />
+      </div>
+      <div>
+        <label for="">색상</label>
+        <input type="color" name="" id="" />
+      </div>
+      <div>
+        <label for="">전화번호</label>
+        <input type="tel" name="" id="" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" />
+        <!--패턴: 검증해야 될 패턴을 집어 넣는 곳-->
+      </div>
+      <div>
+        <label for="">url</label>
+        <input type="url" name="" id="" required />
+      </div>
+      <div>
+        <label for="">range</label>
+        <input type="range" name="" id="" min="1" max="10" step="2" />
+      </div>
+      <div>
+        <label for="">search</label>
+        <input type="search" name="" id="" />
+      </div>
+      <button type="submit">전송</button>
+    </form>
+  </body>
+</html>
